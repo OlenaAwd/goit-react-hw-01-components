@@ -17,9 +17,9 @@ const Statistics = ({ title, stats }) => (
 );
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
+  events: PropTypes.arrayOf(
+    PropTypes.exact({
+      title: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
