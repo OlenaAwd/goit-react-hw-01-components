@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import styles from './statistics.module.css';
+import StatisticsTitle from './StatisticsTitle';
 
 const Statistics = ({ title, stats }) => (
   <section className={styles.statistics}>
-    <h2 className={styles.title}>{title}</h2>
-
+    <StatisticsTitle title={title} />
     <ul className={styles.stat_list}>
       {stats.map(stat => (
         <li className={styles.item} key={stat.id}>
